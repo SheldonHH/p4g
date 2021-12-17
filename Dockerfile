@@ -1,6 +1,9 @@
 FROM ubuntu:20.04
-RUN apt-get update 
-RUN apt-get DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC install git-all -y
+# Update aptitude with new repo
+RUN apt-get update
+
+# Install software 
+RUN apt-get install -y git
 RUN apt-get install default-jre 
 RUN install default-jdk
 RUN git clone https://github.com/sheldonhh/p4p.git
