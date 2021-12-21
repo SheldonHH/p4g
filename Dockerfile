@@ -4,8 +4,7 @@ RUN apt-get update
 
 # Install software 
 RUN apt-get install -y git
-
-RUN apt-get install -y vim wget
+RUN apt-get install -y vim wget tmux
 
 RUN wget https://go.dev/dl/go1.17.5.linux-amd64.tar.gz
 RUN rm -rf /usr/local/go && tar -C /usr/local -xzf go1.17.5.linux-amd64.tar.gz
