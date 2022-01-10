@@ -19,6 +19,11 @@ RUN go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.26
 RUN go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.1
 RUN export PATH="$PATH:$(go env GOPATH)/bin"
 
+RUN wget http://download.redis.io/redis-stable.tar.gz
+RUN tar xvzf redis-stable.tar.gz
+RUN cd redis-stable
+RUN make
+
 RUN git clone https://github.com/sheldonhh/p4p.git
 RUN git clone https://github.com/fedproject/grpc-go.git
 RUN git clone https://github.com/fedproject/grpc-java.git
