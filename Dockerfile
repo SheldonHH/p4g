@@ -6,8 +6,8 @@ RUN apt-get update
 RUN apt-get install -y git
 RUN apt-get install -y vim wget tmux sudo
 
-RUN cd ~/ && wget https://go.dev/dl/go1.17.5.linux-amd64.tar.gz
-RUN rm -rf /usr/local/go && tar -C /usr/local -xzf go1.17.5.linux-amd64.tar.gz
+RUN cd ~/ && wget https://go.dev/dl/go1.17.8.linux-amd64.tar.gz
+RUN rm -rf /usr/local/go && tar -C /usr/local -xzf go1.17.8.linux-amd64.tar.gz
 RUN export PATH=$PATH:/usr/local/go/bin
 
 RUN sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/g' /etc/ssh/sshd_config
