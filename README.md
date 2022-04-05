@@ -6,4 +6,4 @@ docker run -it -p 5920:22 p4p:v1
 
 
 
-docker run --name p4p -itd sheldonhh/p4p /bin/bash 
+docker run --name p4p -itd sheldonhh/p4p:v3 /bin/bash 
