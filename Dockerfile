@@ -27,4 +27,4 @@ RUN make
 RUN git clone https://github.com/sheldonhh/p4p.git
 RUN git clone https://github.com/fedproject/grpc-go.git
 RUN git clone https://github.com/fedproject/grpc-java.git
-RUN apt-get install -y mysql
+RUN apt-get install -y mysql-server
